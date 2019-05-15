@@ -34,10 +34,18 @@ func Analyze(w http.ResponseWriter, r *http.Request) {
 			fmt.Println(string(msg))
 		}*/
 
+		// sdaps add tif file to latex
+		// 1.tif may need to be renamed
+		msg, err := exec.Command("/bin/bash", "-c", "sdaps add ~/sdaps/latex_test ./uploads/1.tif --convert").Output()
+		if err != nil {
+			fmt.Println(err)
+		} else {
+			fmt.Println(string(msg))
+		}
 		// sdaps recongize latex_test
 		// runs OMR recognition on the project directory latex_test
 		// requires monochrome multipage TIFFs to already by added to the project (needs to be done some point prior to this)
-		msg, err := exec.Command("/bin/bash", "-c", "sdaps recognize ~/sdaps/latex_test").Output()
+		msg, err = exec.Command("/bin/bash", "-c", "sdaps recognize ~/sdaps/latex_test").Output()
 		if err != nil {
 			fmt.Println(err)
 		} else {
