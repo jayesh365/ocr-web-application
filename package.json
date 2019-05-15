@@ -24,6 +24,8 @@
     "bootstrap-theme": "^5.0.0",
     "flash-message": "^2.0.1",
     "moment": "^2.24.0",
-    "popper.js": "^1.15.0"
+    "popper.js": "^1.15.0",
+    "tar": ">=4.4.2",
+    "minimatch": ">=3.0.2"
   }
 }
