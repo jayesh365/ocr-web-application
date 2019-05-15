@@ -20,7 +20,7 @@ func Analyze(w http.ResponseWriter, r *http.Request) {
 	if err != nil {
 		fmt.Println(err)
 	} else {
-		fmt.Println(msg)
+		fmt.Println(string(msg))
 	}
 
 	c.Redirect("/")

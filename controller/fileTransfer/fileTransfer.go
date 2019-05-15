@@ -34,9 +34,6 @@ func FileTransfer(w http.ResponseWriter, r *http.Request) {
 	fmt.Printf("File Size: %+v\n", handler.Size)
 	fmt.Printf("MIME Header: %+v\n", handler.Header)
 
-	// Create a temporary file within our temp-images directory that follows
-	// a particular naming pattern
-
 	// read all of the contents of our uploaded file into a
 	// byte array
 	fileBytes, err := ioutil.ReadAll(file)

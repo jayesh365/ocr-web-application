@@ -2,19 +2,24 @@
 {{define "head"}}{{end}}
 {{define "content"}}
 	{{if eq .AuthLevel "auth"}}
-		<form action="/file-transfer" enctype="multipart/form-data" method="post">
-			<label for="choose-file">Submit Form</label>
-			<input type="file" id="choose-file" name="choose-file"></input>
-			<input type="submit" id="submit-file" name="submit-file"></input>
-			<input type="hidden" name="_token" value="{{$.token}}">
-			<input type="hidden" name="_method" value="POST">
-		</form>
-		<form action="/ocr-omr" method="post">
-			<label for="analyze">Analyze Form</label>
-			<input type="submit" id="analyze" name="analyze"></input>
-			<input type="hidden" name="_token" value="{{$.token}}">
-			<input type="hidden" name="_method" value="POST">
-		</form>
+		<h1>Submit Form</h1>
+		<div id="input-form">
+			<div id="pdf-submit">
+				<form action="/file-transfer" enctype="multipart/form-data" method="post">
+					<input class="btn btn-light" type="file" id="choose-file" name="choose-file"></input>
+					<input class="btn btn-primary" type="submit" id="submit-file" name="submit-file"></input>
+					<input type="hidden" name="_token" value="{{$.token}}">
+					<input type="hidden" name="_method" value="POST">
+				</form>
+			</div>
+			<div id="a-submit">
+			<form action="/ocr-omr" method="post">
+				<input class="btn btn-primary" type="submit" id="analyze" name="analyze" value="Analyze Form"></input>
+				<input type="hidden" name="_token" value="{{$.token}}">
+				<input type="hidden" name="_method" value="POST">
+			</form>
+			</div>
+		</div>
 	{{else}}
 	
 		<div class="page-header">
