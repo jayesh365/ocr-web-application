@@ -15,7 +15,7 @@ discuss.
 
 Please submit issues to the correct repositories:
 
-- [Blueprint](https://github.com/blue-jay/blueprint/issues) - issues
+- [Blueprint](https://jayesh/ocr-web-application/issues) - issues
 related to the Blueprint source code
 - [Jay](https://github.com/blue-jay/jay/issues) - issues related to
 the Jay source code

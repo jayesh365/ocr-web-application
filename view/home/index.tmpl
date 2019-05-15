@@ -2,12 +2,19 @@
 {{define "head"}}{{end}}
 {{define "content"}}
 	{{if eq .AuthLevel "auth"}}
-	
-		<div class="page-header">
-			<h1>Hello, {{.first_name}}</h1>
-		</div>
-		<p>You have arrived. Click {{LINK "notepad" "here"}} to view your notepad.</p>
-	
+		<form action="/file-transfer" enctype="multipart/form-data" method="post">
+			<label for="choose-file">Submit Form</label>
+			<input type="file" id="choose-file" name="choose-file"></input>
+			<input type="submit" id="submit-file" name="submit-file"></input>
+			<input type="hidden" name="_token" value="{{$.token}}">
+			<input type="hidden" name="_method" value="POST">
+		</form>
+		<form action="/ocr-omr" method="post">
+			<label for="analyze">Analyze Form</label>
+			<input type="submit" id="analyze" name="analyze"></input>
+			<input type="hidden" name="_token" value="{{$.token}}">
+			<input type="hidden" name="_method" value="POST">
+		</form>
 	{{else}}
 	
 		<div class="page-header">

@@ -7,7 +7,7 @@ import (
 	"net/http"
 	"sync"
 
-	"github.com/blue-jay/blueprint/lib/env"
+	"jayesh/ocr-web-application/lib/env"
 
 	"github.com/blue-jay/core/flash"
 	"github.com/blue-jay/core/form"

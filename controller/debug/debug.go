@@ -5,7 +5,7 @@ import (
 	"net/http"
 	"net/http/pprof"
 
-	"github.com/blue-jay/blueprint/middleware/acl"
+	"jayesh/ocr-web-application/middleware/acl"
 
 	"github.com/blue-jay/core/router"
 

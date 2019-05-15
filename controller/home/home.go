@@ -4,7 +4,7 @@ package home
 import (
 	"net/http"
 
-	"github.com/blue-jay/blueprint/lib/flight"
+	"jayesh/ocr-web-application/lib/flight"
 
 	"github.com/blue-jay/core/router"
 )

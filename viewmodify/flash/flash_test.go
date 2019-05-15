@@ -6,9 +6,9 @@ import (
 	"net/http/httptest"
 	"testing"
 
-	"github.com/blue-jay/blueprint/lib/env"
-	"github.com/blue-jay/blueprint/lib/flight"
-	flashmod "github.com/blue-jay/blueprint/viewmodify/flash"
+	"jayesh/ocr-web-application/lib/env"
+	"jayesh/ocr-web-application/lib/flight"
+	flashmod "jayesh/ocr-web-application/viewmodify/flash"
 
 	"github.com/blue-jay/core/flash"
 	"github.com/blue-jay/core/session"

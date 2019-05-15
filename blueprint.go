@@ -5,8 +5,8 @@ import (
 	"log"
 	"runtime"
 
-	"github.com/blue-jay/blueprint/lib/boot"
-	"github.com/blue-jay/blueprint/lib/env"
+	"jayesh/ocr-web-application/lib/boot"
+	"jayesh/ocr-web-application/lib/env"
 
 	"github.com/blue-jay/core/router"
 	"github.com/blue-jay/core/server"
