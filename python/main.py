@@ -1,6 +1,7 @@
 from ocr import formOcr
 from pageConverter import crop
 from pdfConverter import pdfToImage
+from parseCSV import parse
 
 
 def main():
@@ -10,6 +11,7 @@ def main():
     crop(image, (99, 776, 1557, 1008), './uploads/comments.jpg')
     print(formOcr('./uploads/date.jpg'))
     print(formOcr('./uploads/comments.jpg'))
+    parse('./uploads/test.csv')
 
 
 main()
