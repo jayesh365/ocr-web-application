@@ -1,2 +1,2 @@
 # ocr-web-application
-OCR Web App.
+OCR Web App using BlueJay boilerplate.
