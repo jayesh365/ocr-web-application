@@ -40,7 +40,7 @@ func FileTransfer(w http.ResponseWriter, r *http.Request) {
 	if err != nil {
 		fmt.Println(err)
 	}
-	err = ioutil.WriteFile("./uploads/form.pdf", fileBytes, 0644)
+	err = ioutil.WriteFile("./uploads/form.tiff", fileBytes, 0644)
 	if err != nil {
 		fmt.Println(err)
 	}
