@@ -1,5 +1,6 @@
 import csv
 import json
+import os
 
 
 def parse(file):
@@ -13,7 +14,12 @@ def parse(file):
         for row in reader:
             dictCsv = dict(row)
             json.dump(dictCsv, open(
-                "./uploads/parsedCSV" + str(rowNum) + ".json", 'w'))
+                "./uploads/parsedCSV" + str(rowNum) + ".json", 'w'), indent=4, sort_keys=True)
             rowNum += 1
     # close the csv file
     csvFile.close()
+    # delete csv file
+    os.remove(file)
+
+
+parse("./sdaps/data_1.csv")
